@@ -1,9 +1,14 @@
-from PIL import Image
+﻿from PIL import Image
 from texture import loadpng
 import os 
+# print os.getcwd()     #获取当前工作目录路径
+# print os.path.abspath('.') #获取当前工作目录路径
+# print os.path.abspath('test.txt') #获取当前目录文件下的工作目录路径
+# print os.path.abspath('..') #获取当前工作的父目录 ！注意是父目录路径
+# print os.path.abspath(os.curdir) #获取当前工作目录路径
 
-srcPath = "C:/Users/lidachuizi/Desktop/xxx/SplitImage/plist"
-outPath = "C:/Users/lidachuizi/Desktop/xxx/SplitImage/out"
+srcPath = os.path.abspath('.') + "/plist"
+outPath = os.path.abspath('.') + "/out"
 PngNames = []
 # PngNames = ["plist_skill_effect_1004hit","plist_skill_effect_1004hit1"]
 def eachFile(filepath):
